@@ -1,0 +1,1 @@
+trop cool on va créer des scripts en c
