@@ -24,3 +24,4 @@ int main(void)
 		printf("%d is negative\n", n);
 	}
 }
+gcc -o 0-positive_or_negative 0-positive_or_negative.c
