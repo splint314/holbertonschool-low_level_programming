@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- * main - Entry point
+ * main - check the code for _putchar
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -12,6 +13,5 @@ int i;
 for (i = 0; text[i] != '\0'; i++)
 _putchar(text[i]);
 _putchar('\n');
-
 return (0);
 }
