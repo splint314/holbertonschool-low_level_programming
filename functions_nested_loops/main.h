@@ -5,5 +5,6 @@ int _putchar(char c);
 int _islower(int c);
 int print_sign(int n);
 int _abs(int);
+int print_last_digit(int);
 
 #endif /* MAIN_H */
