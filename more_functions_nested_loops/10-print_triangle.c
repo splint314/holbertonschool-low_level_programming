@@ -1,26 +1,29 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - prints a triangle in the terminal
+ * print_triangle - Prints a right-aligned triangle using '#'
+ * @size: height (and base width) of the triangle
  *
- * Return: Always 0.
+ * Description: If size <= 0, prints only a newline.
  */
-int main(void)
+void print_triangle(int size)
 {
-int rows = 5;
-int i, j, k;
+int row, space, hash;
 
-for (i = 0; i < rows; i++)
+if (size <= 0)
 {
-for (j = 0; j < 2 * (rows - i) - 2; j++)
-{
-printf(" ");
-}
-for (k = 0; k <= i; k++)
-{
-printf("%d ", k + 1);
-}
-printf("\n");
+_putchar('\n');
+return;
 }
 
-return (0);
+for (row = 1; row <= size; row++)
+{
+for (space = 0; space < (size - row); space++)
+_putchar(' ');
+
+for (hash = 0; hash < row; hash++)
+_putchar('#');
+
+_putchar('\n');
+}
 }
