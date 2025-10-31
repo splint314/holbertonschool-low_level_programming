@@ -1,34 +1,22 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
 /** 
  * main - Entry point
  * 
  * Return: Always 0 (Success)
 */
-int main(void)
+char *_strncat(char *dest, char *src, int n)
 {
-int n;
-int last_digit;
+int i = 0, j = 0;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-last_digit = n % 10;
+while (dest[i] != '\0')
+i++;
 
-printf("Last digit of %d is %d ", n, last_digit);
+while (j < n && src[j] != '\0') {
+dest[i + j] = src[j];
+j++;
+}
 
-if (last_digit > 5)
-{
-printf("and is greater than 5\n");
-}
-else if (last_digit == 0)
-{
-printf("and is 0\n");
-}
-else
-{
-printf("and is less than 6 and not 0\n");
-}
-return (0);
+dest[i + j] = '\0';
+return dest;
 }
