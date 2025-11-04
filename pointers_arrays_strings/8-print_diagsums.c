@@ -1,10 +1,17 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_chessboard - prints the chessboard
- * @a: 2D array representing the chessboard
+ * print_diagsums - prints the sum of the two diagonals of a square matrix
+ * @a: pointer to the first element of the matrix
+ * @size: size of the matrix
+ * Return: void
+ * Description: This function calculates and prints the sums of the two
+ * diagonals of a square matrix of integers. The matrix is represented as a
+ * one-dimensional array, and the size parameter indicates the number of rows
+ * and columns in the matrix.
  */
-void print_diagsums(int *a, int size)
+
+ void print_diagsums(int *a, int size)
 {
 int i;
 int sum1 = 0;
