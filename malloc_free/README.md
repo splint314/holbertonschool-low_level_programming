@@ -1,0 +1,1 @@
+on va parler d'allocation de mémoire 
