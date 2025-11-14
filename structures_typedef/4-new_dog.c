@@ -11,6 +11,7 @@
  * Return: pointer to new dog_t, or NULL if it fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
+
 {
 dog_t *d;
 char *name_copy;
