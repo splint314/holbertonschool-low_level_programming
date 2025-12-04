@@ -1,0 +1,1 @@
+on va se battre avec des liste chainées et des noeuds
