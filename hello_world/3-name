@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -s cisfun -c cisfun.c
+gcc -Wall -o cisfun -c cisfun.c
