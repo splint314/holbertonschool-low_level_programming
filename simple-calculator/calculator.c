@@ -15,7 +15,7 @@ int main()
         printf("2) Subtract\n");
         printf("3) Multiply\n");
         printf("4) Divide\n");
-        printf("5) Quit\n");
+        printf("0) Quit\n");
         printf("Choice: ");
 
         if (scanf("%d", &choice) != 1) {
@@ -23,7 +23,7 @@ int main()
             break;
         }
 
-        if (choice == 5) {
+        if (choice == 0) {
             printf("See you!\n");
             break;
         }
