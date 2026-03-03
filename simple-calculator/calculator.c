@@ -2,61 +2,67 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-int main ()
+int main()
 {
-		int choice = -1;
-		double num1, num2, result;
-		
-		printf ("Hello, welcome to the holberton simple calculator\n");
+    int choice = -1;
+    double num1, num2, result;
 
-		while (true)
-		{
-			printf ("1) Add\n");
-			printf ("2) Subtract\n");
-			printf ("3) Multiply\n");
-			printf ("4) Divide\n");
-			printf ("5) Quit\n");
-			printf ("Choice: ");
-			
+    printf("Hello, welcome to the Holberton simple calculator\n");
 
-			if (scanf("%d", &choice) != 1) {
+    while (true)
+    {
+        printf("\n1) Add\n");
+        printf("2) Subtract\n");
+        printf("3) Multiply\n");
+        printf("4) Divide\n");
+        printf("5) Quit\n");
+        printf("Choice: ");
+
+        if (scanf("%d", &choice) != 1) {
             printf("Invalid choice. Please enter a number.\n");
             break;
         }
 
-        if (choice == 0) {
-            printf("Bye!\n");
+        if (choice == 5) {
+            printf("See you!\n");
             break;
         }
 
-            if (choice >= 1 && choice <= 4) {
+        if (choice >= 1 && choice <= 4) {
             printf("Enter two numbers: ");
-            scanf("%lf %lf", &num1, &num2);
+            if (scanf("%lf %lf", &num1, &num2) != 2) {
+                printf("Invalid numbers.\n");
+                continue;
+            }
         }
-			
-		switch (choice)
-			{
-				case 1:
-					printf ("Enter amount:");
-					scanf ("%lf", &amount);
-					balance += amount;
-					break;
-				case 2:
-					printf ("Enter amount:");
-					scanf ("%lf", &amount);
-					balance -= amount;
-					break;
 
-				case 3:
-					printf ("%.2f\n", balance);
-					break;
-				
-				case 4:
-					printf ("%.2f\n", balance);	
-					exit (0);
-				
-				case 5:
-					exit (0);		
-			}
-		} 
+        switch (choice)
+        {
+            case 1:
+                result = num1 + num2;
+                printf("Result: %.2f\n", result);
+                break;
+            case 2:
+                result = num1 - num2;
+                printf("Result: %.2f\n", result);
+                break;
+            case 3:
+                result = num1 * num2;
+                printf("Result: %.2f\n", result);
+                break;
+            case 4:
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    printf("Result: %.2f\n", result);
+                } else {
+                    printf("Error: Division by zero!\n");
+                }
+                break;
+            default:
+                printf("Unknown option.\n");
+                break;
+        }
+    }
+
+    return 0;
 }
