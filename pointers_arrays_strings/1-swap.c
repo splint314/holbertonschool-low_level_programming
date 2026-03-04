@@ -3,6 +3,8 @@
 
 /**
 * swap_int swaps the value of 2 integers
+* *a = address of the first integer
+* *b = address of the second integer
 */
 
 void swap_int(int *a, int *b)
