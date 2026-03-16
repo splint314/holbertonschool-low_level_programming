@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
-* str_concat: concatenate two character chains 
-* @s1: first chain
-* @s2: second chain
+* str_concat - concatenates two strings
+* @s1: first string
+* @s2: second string
 *
-* Return: pointer to a memory a new memory zone, or null if it fails
+* Return: pointer to a new string, or NULL if it fails
 */
 char *str_concat(char *s1, char *s2)
 {
